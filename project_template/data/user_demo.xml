@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_user_madison" model="res.users">
+        <field name="name">Madison Diaz</field>
+        <field name="login">user</field>
+        <field name="email">madison.diaz@gmail.com</field>
+        <field name="groups_id" eval="[(6, 0, [ref('project.group_project_manager')])]"/>
+    </record>
+</odoo>

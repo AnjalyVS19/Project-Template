@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="project_project_view_form_simplified_footer_inherit_template_button" model="ir.ui.view">
+        <field name="name">project.project.view.form.simplified.inherit.template.button</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified_footer"/>
+        <field name="arch" type="xml">
+            <xpath expr="//footer" position="inside">
+                <button name="action_create_template"
+                        string="Create Template"
+                        type="object"
+                        class="btn-secondary"
+                        groups="project.group_project_manager"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="project_project_view_form_inherit_template_button" model="ir.ui.view">
+        <field name="name">project.project.view.form.inherit.template.button</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <!-- Add button in the header -->
+            <xpath expr="//header" position="inside">
+                <button name="action_create_template"
+                        string="Create Template"
+                        type="object"
+                        class="btn-secondary"
+                        groups="project.group_project_manager"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
